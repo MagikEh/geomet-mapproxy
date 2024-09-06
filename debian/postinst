@@ -38,5 +38,6 @@ if [ -d $GEOMET_MAPPROXY_CONFIG ]
 then
     echo "Configuration $GEOMET_MAPPROXY_CONFIG exists"
 else
+    export REQUESTS_CA_BUNDLE=/etc/ssl/certs/
     geomet-mapproxy config create
 fi
